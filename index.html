@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>محل الشاي الملكي</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #f3f2ee, #fff);
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ======= HEADER ======= */
+    #header-container {
+      background-color: #3e2723;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+      height: 45px;
+      width: 45px;
+    }
+
+    #header-container h1 {
+      font-size: 1.8em;
+      margin: 0;
+    }
+
+    /* ======= MAIN CONTENT ======= */
+    main {
+      flex-grow: 1;
+      width: 100%;
+      max-width: 800px;
+      margin: 30px auto;
+      background-color: #ffffffd9;
+      border-radius: 12px;
+      padding: 30px 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .main-image {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .video-wrapper {
+      width: 100%;
+      margin-bottom: 25px;
+    }
+
+    video {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #4e342e;
+      margin-bottom: 20px;
+      font-size: 1.5em;
+      border-bottom: 2px solid #c7a17a;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 20px;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    select {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+    }
+
+    /* ======= FOOTER ======= */
+    #footer-container {
+      background-color: #3e2723;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.95em;
+      margin-top: auto;
+    }
+
+    #footer-container p {
+      margin: 6px 0;
+    }
+
+    /* ======= RESPONSIVE ======= */
+    @media (max-width: 768px) {
+      #header-container h1 {
+        font-size: 1.4em;
+      }
+
+      .logo {
+        height: 35px;
+        width: 35px;
+      }
+
+      .main-image {
+        height: 180px;
+      }
+
+      main {
+        margin: 15px 10px;
+        padding: 20px 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ✅ HEADER -->
+  <div id="header-container">
+    <img src="https://cdn-icons-png.flaticon.com/512/924/924514.png" alt="شعار المحل" class="logo" />
+    <h1>محل الشاي الملكي</h1>
+  </div>
+
+  <!-- ✅ MAIN -->
+  <main>
+
+    <!-- صورة شاي -->
+    <img src="https://images.unsplash.com/photo-1612197615421-bbc45ef8f9a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
+         alt="كوب شاي"
+         class="main-image" />
+
+    <!-- فيديو إعلان -->
+    <div class="video-wrapper">
+      <video controls>
+        <source src="tea.mp4" type="video/mp4">
+        المتصفح لا يدعم تشغيل الفيديو.
+      </video>
+    </div>
+
+    <!-- قائمة -->
+    <h2>قائمة المشروبات والحلى</h2>
+
+    <label for="drinks">اختر مشروبًا:</label>
+    <select id="drinks">
+      <optgroup label="شاي">
+        <option>شاي كرك</option>
+        <option>شاي أخضر</option>
+        <option>شاي أسود</option>
+        <option>شاي مغربي</option>
+      </optgroup>
+      <optgroup label="قهوة">
+        <option>قهوة عربية</option>
+        <option>اسبريسو</option>
+        <option>لاتيه</option>
+      </optgroup>
+    </select>
+
+    <label for="desserts">اختر نوع الحلى:</label>
+    <select id="desserts">
+      <optgroup label="كعك">
+        <option>تشيز كيك</option>
+        <option>كيكة التمر</option>
+      </optgroup>
+      <optgroup label="بسكويت">
+        <option>بسكويت الزبدة</option>
+        <option>كوكيز بالشوكولاتة</option>
+      </optgroup>
+    </select>
+
+  </main>
+
+  <!-- ✅ FOOTER -->
+  <div id="footer-container">
+    <p>📞 للتواصل: 0501234567</p>
+    <p>📍 فروعنا: الرياض - جدة - الدمام</p>
+  </div>
+
+</body>
+</html>
